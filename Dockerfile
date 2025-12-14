@@ -3,16 +3,16 @@ FROM alpine:latest AS downloader
 
 WORKDIR /download
 
-ARG vs_type=stable
-ARG vs_os=linux-x64
-ARG vs_version=1.21.5
+ARG VS_TYPE=stable
+ARG VS_OS=linux-x64
+ARG VS_VERSION=1.21.6
 
 RUN apk update
 RUN apk add wget tar
 
-RUN wget "https://cdn.vintagestory.at/gamefiles/${vs_type}/vs_server_${vs_os}_${vs_version}.tar.gz"
-RUN tar -xvzf "vs_server_${vs_os}_${vs_version}.tar.gz"
-RUN rm "vs_server_${vs_os}_${vs_version}.tar.gz"
+RUN wget "https://cdn.vintagestory.at/gamefiles/${VS_TYPE}/vs_server_${VS_OS}_${VS_VERSION}.tar.gz"
+RUN tar -xvzf "vs_server_${VS_OS}_${VS_VERSION}.tar.gz"
+RUN rm "vs_server_${VS_OS}_${VS_VERSION}.tar.gz"
 
 # ============== runtime stage ==================
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as runtime

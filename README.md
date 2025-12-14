@@ -2,6 +2,10 @@
 
 This image can be used to run a dedicated server for [Vintage Story](https://www.vintagestory.at/)
 
+## Build the image using GitHub
+
+Run the workflow and set the version of Vintage Story that you'd like, then pull the newly generated image from ghcr.io: `ghcr.io/asterle/vintagestory:latest`
+
 ## Run this image with docker run
 
 To run this image you can use `docker run -pd 42420:42420 --name VintageStoryServer devidian/vintagestory:latest`, but you may want to use a customized version for your needs so see following instructions.
@@ -13,7 +17,7 @@ To run this image with docker compose you can start using the following file:
 ```yaml
 services:
   vsserver-stable:
-    image: devidian/vintagestory:latest
+    image: ghcr.io/asterle/vintagestory:latest
     container_name: vsserver
     restart: unless-stopped
     volumes:
