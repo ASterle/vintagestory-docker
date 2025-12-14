@@ -4,7 +4,7 @@ This image can be used to run a dedicated server for [Vintage Story](https://www
 
 ## Build the image using GitHub
 
-Run the workflow and set the version of Vintage Story that you'd like, then pull the newly generated image from ghcr.io: `ghcr.io/asterle/vintagestory:latest`
+Run the [workflow](https://github.com/ASterle/vintagestory-docker/actions/workflows/docker-build-and-push.yml) and set the version of Vintage Story that you'd like, then pull the newly generated image from ghcr.io: `ghcr.io/asterle/vintagestory:latest`
 
 ## Run this image with docker run
 
