@@ -26,7 +26,7 @@ services:
       # • you could also use docker volumes instead of host path
       - /.vsdata:/gamedata
     ports:
-      - "42420:42420/tcd"
+      - "42420:42420/tcp"
       - "42420:42420/udp"
     environment:
       VS_DATA_PATH: /gamedata
